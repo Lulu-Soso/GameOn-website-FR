@@ -32,14 +32,22 @@ img {
 
 .topnav {
   overflow: hidden;
-  margin: 3.5%;
+  /* margin: 3.5%; */ /* deleted property */
+  margin: 3.5% 0 3.5% 3.5%; /* modified property */
 }
 .header-logo {
     float: left;
 }
-.main-navbar {
+
+.main-navbar { 
     float: right;
 }
+
+.main-navbar i { /* added property */
+  color: red;
+  background-color: #ffffff;
+}
+
 .topnav a {
   float: left;
   display: block;
@@ -47,7 +55,7 @@ img {
   text-align: center;
   padding: 12px 12px;
   margin: 5px;
-  text-decoration: none;
+  text-decoration: none; 
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
@@ -62,21 +70,24 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline; /* added property */
+  text-underline-offset: 5px; /* added property */
+  
 }
 
 .topnav .icon {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
-}
+} */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -88,18 +99,16 @@ img {
     display: block;
     text-align: left;
   }
-}
+} */
 
-
-
- @media screen and (max-width: 540px) {
+ /* @media screen and (max-width: 540px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-} 
+}  */
 
 main {
   font-size: 130%;
@@ -172,7 +181,8 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
-  max-width: 500px;
+  /* max-width: 500px; */
+  max-width: 700px; /* modified property */
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -236,6 +246,7 @@ input[data-error]::after {
 .checkbox2-label {
   position: relative;
   margin-left: 36px;
+  margin-right: 36px; /* added property */
   font-size: 12px;
   font-weight: normal;
 }
@@ -403,6 +414,7 @@ input[data-error]::after {
 .text-label {
   font-weight: normal;
   font-size: 16px;
+  padding-left: 0; /* added property */
 }
 .hero-section {
   min-height: 93vh;
@@ -420,7 +432,11 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  /* min-width: 424px; */
+  display: grid;  /* added property */
+  place-items: center; /* added property */
+  justify-items: start; /* added property */
+  
 }
 .hero-content::after {
   content: "";
@@ -441,7 +457,8 @@ input[data-error]::after {
   white-space: nowrap;
 }
 .hero-text {
-  width: 146%;
+  /* width: 146%; */ /* deleted property */
+  width: 50%; /* modified property */
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
@@ -474,19 +491,21 @@ input[data-error]::after {
   display: none;
 }
 footer {
-  padding-left: 2vw;
-  padding-right: 2vw;
+  /* padding-left: 2vw; */ /* deleted property */
+  /* padding-right: 2vw; */ /* deleted property */
   margin: 0 20px;
 }
-@media screen and (max-width: 800px) {
-  .hero-section {
+/* @media screen and (max-width: 800px) { */
+/* @media screen and (max-width: 992px) { modified property */
+/* @media screen and (max-width: 768px) { modified property */
+  /* .hero-section {
     display: block;
     box-shadow: unset;
   }
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0px;
   }
   .hero-content::after {
     content: unset;
@@ -515,7 +534,7 @@ footer {
     margin-top: 50px;
     text-align: center;
   }
-}
+} */
 
 @keyframes modalopen {
   from {
