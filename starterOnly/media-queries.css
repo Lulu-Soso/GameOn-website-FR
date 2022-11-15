@@ -1,5 +1,5 @@
 /* @media screen and (max-width: 800px) { */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   /* modified max-width */
   .header-logo img {
     /* added property */
@@ -45,14 +45,13 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* @media screen and (max-width: 992px) { */
   .topnav {
     margin: 3.5% !important; /* added property */
   }
   .topnav img {
     width: 8rem !important;
-    /* margin-top: 0px !important; */
   }
   .topnav a {
     display: none;
@@ -60,10 +59,15 @@
   .topnav a.icon {
     float: right;
     display: block;
-    /* margin-top: -15px;  */
+    color: red; /* added property */
+    margin-right: 0; /* added property */
+  }
+  .topnav a.icon:hover { /* added property */
+    color: #fff;
   }
   .header-logo {
     margin-top: 5px;
+    margin-bottom: 20px; /* added property */
   }
   .topnav.responsive {
     position: relative;
@@ -72,6 +76,17 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+  .topnav.responsive .main-navbar { /* added property */
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgb(241, 241, 239);
+    border-radius: 15px;
+  }
+  .topnav.responsive .main-navbar a{ /* added property */
+    border-bottom: 1px solid #fff;
   }
   .topnav.responsive a {
     float: none;
