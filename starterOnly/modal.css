@@ -210,6 +210,9 @@ input {
   border: 0.8px solid #ccc;
   outline: none;
 }
+/* input:invalid { 
+  border: 3px solid red;
+} */
 .text-control {
   margin: 0;
   padding: 8px;
@@ -220,13 +223,16 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  /* font-size: 0.4em; */
+  font-size: 0.5em; /* modified font-size */
   color: #e54858;
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: right;
-  line-height: 0.3;
+  /* text-align: right; */
+  text-align: left;
+  /* line-height: 0.3; */
+  line-height: 1.3; /* modified */
   opacity: 0;
   transition: 0.3s;
 }
@@ -236,6 +242,36 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
+.formData[data-success]::after {
+  content: attr(data-success);
+  font-size: 0.4em;
+  color: greenyellow;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: right;
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+.formData[data-success-visible="true"]::after {
+  opacity: 1;
+}
+.formData[data-success-visible="true"] .text-control {
+  border: 2px solid greenyellow;
+}
+/**************************************/
+/* .error input {
+  color: red;
+  border: 1px solid rgba(255, 0, 0, 0.527);
+} */
+/* .error span {
+  visibility: visible;
+  opacity: 1;
+  color: red;
+} */
+
+/**************************************/
 /* 
 input[data-error]::after {
     content: attr(data-error);
@@ -255,7 +291,8 @@ input[data-error]::after {
   display: block;
   width: 20px;
   height: 20px;
-  border: 2px solid #279e7a;
+  /* border: 2px solid #279e7a; */
+  border: 2px solid #fff;
   border-radius: 50%;
   text-indent: 29px;
   white-space: nowrap;
@@ -286,6 +323,9 @@ input[data-error]::after {
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
   opacity: 1;
+}
+.checkbox-input:checked + .checkbox-label .checkbox-icon { /* added property */
+  border: 2px solid #279e7a;
 }
 .checkbox-input:checked + .checkbox2-label .checkbox-icon {
   background: #279e7a;
@@ -336,7 +376,8 @@ input[data-error]::after {
 .btn-signup {
   background: #fe142f;
   display: block;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: 30px auto; /* modified */
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
@@ -430,7 +471,7 @@ input[data-error]::after {
   grid-column: span 4;
   background: #232323;
   color: #fff;
-  position: relative;
+  /* position: relative;*/ /* delete property */
   text-align: left;
   /* min-width: 424px; */
   display: grid;  /* added property */
@@ -442,8 +483,8 @@ input[data-error]::after {
   content: "";
   width: 100%;
   height: 100%;
-  background: #232323;
-  position: absolute;
+  /* background: #232323; */ /* delete property */
+  /* position: absolute; */ /* delete property */
   right: -80px;
   top: 0;
 }
@@ -544,5 +585,9 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+#validForm{
+  display: none;
 }
 
