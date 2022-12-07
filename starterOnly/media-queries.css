@@ -60,10 +60,10 @@
     float: right;
     display: block;
     color: red; /* added property */
-    margin-right: 0; /* added property */
   }
   .topnav a.icon:hover { /* added property */
-    color: #fff;
+    color: red;
+    background: none;
   }
   .header-logo {
     margin-top: 5px;
@@ -103,8 +103,14 @@
     font-size: 1rem !important;
     margin-top: 20px;
   }
-  .checkbox-label {
+  /* .checkbox-label {
     margin-right: 0px;
+  }
+  .checkbox2-label {
+    margin-right: 0px;
+  } */
+  label span {
+    display: none;
   }
 }
 

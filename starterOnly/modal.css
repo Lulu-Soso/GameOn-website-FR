@@ -181,8 +181,8 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
-  /* max-width: 500px; */
-  max-width: 700px; /* modified property */
+  max-width: 500px;
+  /* max-width: 700px; modified property */
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -200,7 +200,8 @@ main {
 
 label {
   font-family: var(--font-default);
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-size: 14px; /* modified property*/
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -210,9 +211,6 @@ input {
   border: 0.8px solid #ccc;
   outline: none;
 }
-/* input:invalid { 
-  border: 3px solid red;
-} */
 .text-control {
   margin: 0;
   padding: 8px;
@@ -260,29 +258,11 @@ input {
 .formData[data-success-visible="true"] .text-control {
   border: 2px solid greenyellow;
 }
-/**************************************/
-/* .error input {
-  color: red;
-  border: 1px solid rgba(255, 0, 0, 0.527);
-} */
-/* .error span {
-  visibility: visible;
-  opacity: 1;
-  color: red;
-} */
-
-/**************************************/
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
 .checkbox-label,
 .checkbox2-label {
   position: relative;
   margin-left: 36px;
-  margin-right: 36px; /* added property */
+  /* margin-right: 36px; added property */
   font-size: 12px;
   font-weight: normal;
 }
@@ -454,7 +434,8 @@ input[data-error]::after {
 /* custom select end */
 .text-label {
   font-weight: normal;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 14px; /* modified property */
   padding-left: 0; /* added property */
 }
 .hero-section {
@@ -467,43 +448,38 @@ input[data-error]::after {
   margin-bottom: 10px;
 }
 .hero-content {
-  padding: 51px 67px;
-  grid-column: span 4;
-  background: #232323;
-  color: #fff;
-  /* position: relative;*/ /* delete property */
-  text-align: left;
-  /* min-width: 424px; */
-  display: grid;  /* added property */
-  place-items: center; /* added property */
-  justify-items: start; /* added property */
-  
-}
-.hero-content::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* background: #232323; */ /* delete property */
-  /* position: absolute; */ /* delete property */
-  right: -80px;
-  top: 0;
-}
-.hero-content > * {
-  position: relative;
-  z-index: 1;
-}
-.hero-headline {
-  font-size: 6rem;
-  font-weight: normal;
-  white-space: nowrap;
-}
-.hero-text {
-  /* width: 146%; */ /* deleted property */
-  width: 50%; /* modified property */
-  font-weight: normal;
-  margin-top: 57px;
-  padding: 0;
-}
+    padding: 51px 67px;
+    grid-column: span 4;
+    background: #232323;
+    color: #fff;
+    position: relative;
+    text-align: left;
+    min-width: 424px;
+  }
+  .hero-content::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    position: absolute;
+    right: -80px;
+    top: 0;
+  }
+  .hero-content > * {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-headline {
+    font-size: 6rem;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  .hero-text {
+    width: 146%;
+    font-weight: normal;
+    margin-top: 57px;
+    padding: 0;
+  }
 .btn-signup {
   outline: none;
   text-transform: capitalize;
@@ -536,46 +512,6 @@ footer {
   /* padding-right: 2vw; */ /* deleted property */
   margin: 0 20px;
 }
-/* @media screen and (max-width: 800px) { */
-/* @media screen and (max-width: 992px) { modified property */
-/* @media screen and (max-width: 768px) { modified property */
-  /* .hero-section {
-    display: block;
-    box-shadow: unset;
-  }
-  .hero-content {
-    background: #fff;
-    color: #000;
-    padding: 0px;
-  }
-  .hero-content::after {
-    content: unset;
-  }
-  .hero-content .btn-signup {
-    display: none;
-  }
-  .hero-headline {
-    font-size: 4.5rem;
-    white-space: normal;
-  }
-  .hero-text {
-    width: unset;
-    font-size: 1.5rem;
-  }
-  .hero-img img {
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-  .hero-section > .btn-signup {
-    display: block;
-    margin: 32px auto 10px;
-    padding: 12px 35px;
-  }
-  .copyrights {
-    margin-top: 50px;
-    text-align: center;
-  }
-} */
 
 @keyframes modalopen {
   from {

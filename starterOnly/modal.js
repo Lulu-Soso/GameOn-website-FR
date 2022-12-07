@@ -12,17 +12,13 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector(".close"); // element close modal
 const form = document.getElementById("reserve");
-const result = document.getElementById("result");
 const nameChecker = document.querySelectorAll("input[type='text']");
 const emailChecker = document.getElementById("email");
 const birthdateChecker = document.getElementById("birthdate");
 const quantityChecker = document.getElementById("quantity");
 const locationChecker = document.querySelectorAll("input[name='location']");
 const termChecker = document.querySelectorAll("input[name='term']");
-const resultCheckbox = document.getElementById("resultCheckbox");
-const formData = document.querySelectorAll(".formData");
-const inputs = document.querySelectorAll("input");
-const conditionChecked = document.getElementById("checkbox1");
+const conditionChecker = document.getElementById("checkbox1");
 const spanChecked = document.getElementById("spanChecked");
 
 // launch modal event
@@ -40,7 +36,7 @@ modalClose.addEventListener("click", closeModal);
 function closeModal() {
   modalbg.style.display = "none";
   form.reset();
-  submitForm();
+  form.submit();
 }
 ////////// close modal //////////
 
@@ -65,6 +61,7 @@ const errorRemove = (tag) => {
   parentInput.removeAttribute("data-error-visible");
 };
 
+////////// input values variables //////////
 let firstname,
   lastname,
   email,
@@ -121,6 +118,7 @@ nameChecker.forEach((nameCheck) => {
   });
 });
 
+
 emailChecker.addEventListener("input", (e) => {
   let inputEmail = e.target.value;
   let regexEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i;
@@ -170,7 +168,7 @@ locationChecker.forEach((radioBtn) => {
   });
 });
 
-conditionChecked.addEventListener("click", () => {
+conditionChecker.addEventListener("click", () => {
   if (checkbox1.checked) {
     errorRemove("checkbox1");
     spanChecked.style.border = null;
@@ -194,6 +192,7 @@ termChecker.forEach((checkbox) => {
   });
 });
 
+////////// submited form - data //////////
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   e.stopPropagation();
@@ -255,4 +254,3 @@ form.addEventListener("submit", (e) => {
     }
   }
 });
-
